@@ -78,3 +78,5 @@ The config file is in JSON file format. It configures the scheduling algorithm, 
 For slices with different weights, the config file is: ```./exp-backlogged-20slicesdiffw/config ```
 
 * After experiments finish, run ```./plot_throughput.py``` to get the throughput and radio resource distribution graph
+## Contact
+Contact 202151087@iiitvadodara.ac.in for assistance this is how readme code is written, give my content in this way
