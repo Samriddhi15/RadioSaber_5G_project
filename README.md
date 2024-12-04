@@ -1,6 +1,6 @@
 # RadioSaber  
 
-RadioSaber is a state-of-the-art 5G RAN slicing algorithm designed to achieve high spectrum efficiency, ensure weighted fairness among slices subject to their Service Level Agreements (SLA), and allow slices to customize their scheduling policies. For more details, refer to our paper published in NSDI'2023.  
+RadioSaber is a state-of-the-art 5G RAN slicing algorithm designed to achieve high spectrum efficiency, ensure weighted fairness among slices subject to their Service Level Agreements (SLA), and allow slices to customize their scheduling policies. For more details, refer to our paper published in **NSDI'2023**.  
 
 ---
 
@@ -17,7 +17,7 @@ RadioSaber is a state-of-the-art 5G RAN slicing algorithm designed to achieve hi
 
 ## Overview of RadioSaber  
 
-RadioSaber is built upon LTE-Sim, an open-source framework for simulating Radio Access Networks (RAN) in LTE. LTE-Sim simulates the entire software stack in RAN, including:  
+RadioSaber is built upon **LTE-Sim**, an open-source framework for simulating Radio Access Networks (RAN) in LTE. LTE-Sim simulates the entire software stack in RAN, including:  
 
 - PDCP, RLC, MAC, and RRC layers.  
 - Channel propagation models in the physical layer.  
@@ -36,20 +36,17 @@ RadioSaber focuses primarily on flow scheduling in the MAC layer.
 
 ## Software Installation  
 
-RadioSaber is currently tested and supported in an Ubuntu environment.  
+RadioSaber is currently tested and supported in an **Ubuntu environment**.  
 
 ### Prerequisites:  
 Install the required library:  
 ```bash
 sudo apt-get install libjsoncpp-dev
+## How to Run RadioSaber  
 
-cd RadioSaber
-make -j8
-How to Run RadioSaber
-After building RadioSaber, you can run experiments using the following command:
+After building RadioSaber, you can run experiments using the following command:  
 
-bash
-Copy code
+```bash
 ${PATH-TO-RADIOSABER}/LTE-Sim SingleCellWithI [radius] [inter-slice scheduler] [frame struct] [mobility speed] [random seed] [config file]
 Parameters:
 radius: The coverage area of the cell (default: 1).
@@ -76,14 +73,17 @@ Spectrum Efficiency and Fairness (Section 6.1)
 To run experiments for spectrum efficiency and fairness, execute the following steps:
 
 Change to the experiment directory:
+
 bash
 Copy code
 cd ${PATH-TO-RADIOSABER}/NSDI23-radiosaber-experiments/exp-customization
 Run the experiment script:
+
 bash
 Copy code
 ./run_backlogged.sh
 Use the appropriate configuration files:
+
 For slices with the same weights:
 bash
 Copy code
@@ -93,19 +93,9 @@ bash
 Copy code
 ./exp-backlogged-20slicesdiffw/config
 Generate throughput and radio resource distribution graphs:
+
 bash
 Copy code
 ./plot_throughput.py
 Contact
 For any inquiries, feel free to contact 202151137@iiitvadodara.ac.in.
-
-css
-Copy code
-
-This content is ready to be copy-pasted into a `README.md` file in your GitHub repository. It includes proper Markdown formatting, headers, and code blocks to make it visually appealing and easy to navigate.
-
-
-
-
-
-
