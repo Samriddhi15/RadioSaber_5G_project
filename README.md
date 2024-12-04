@@ -44,58 +44,37 @@ Install the required library:
 sudo apt-get install libjsoncpp-dev
 ## How to Run RadioSaber  
 
-After building RadioSaber, you can run experiments using the following command:  
+## How to run RadioSaber
+Since RadioSaber is built upon LTE-Sim, there is a lot legacy code we won't use. After you've built RadioSaber, run the following command to start an experiment:
 
-```bash
+```
 ${PATH-TO-RADIOSABER}/LTE-Sim SingleCellWithI [radius] [inter-slice scheduler] [frame struct] [mobility speed] [random seed] [config file]
+```
+
 Parameters:
-radius: The coverage area of the cell (default: 1).
-inter-slice scheduler:
-1: No-Slicing (global proportional fairness scheduler without slicing).
-7: NVS (a channel-agnostic inter-slice scheduler from MobiCom '10).
-8: Sequential (channel-aware inter-slice scheduler with lower time complexity).
-9: RadioSaber (our channel-aware inter-slice scheduler).
-10: Upperbound (an impractical scheme offering upper-bound on spectrum efficiency).
-11: NVS-Nongreedy (NVS for inter-slice scheduling with non-greedy enterprise scheduling).
-frame struct: Set to 1 for FDD.
-mobility speed: Speed of UEs (irrelevant if using CQI traces).
-random seed: Random seed for reproducibility.
-config file: JSON-based configuration file for scheduling algorithms and parameters.
-Configuration File
-The configuration file is in JSON format and includes:
 
-Scheduling algorithm.
-Number of UEs.
-Weight of each slice.
-Application and flow parameters for UEs in each slice.
-Experiments and Reproducibility
-Spectrum Efficiency and Fairness (Section 6.1)
-To run experiments for spectrum efficiency and fairness, execute the following steps:
+* radius: the radius of the coverage area of a cell, the default value is 1
+* inter-slice scheduler:
+  * 1: No-Slicing, a global proportional fairness scheduler without any notion of slicing
+  * 7: NVS, a channel-agnostic inter-slice scheduler proposed in [Mobicom10](https://dl.acm.org/doi/10.1145/1859995.1860023)
+  * 8: Sequential, a channel-aware inter-slice scheduler that has lower time complexity and lower spectrum efficiency
+  * 9: RadioSaber, our channel-aware inter-slice scheduler
+  * 10: Upperbound, an impractical scheme that offers an upper-bound on the spectrum efficiency that any inter-slice scheduler can achieve
+  * 11: NVS-Nongreedy, the inter-slice scheduler applies NVS while enterprise schedulers apply a non-greedy proportional fairness algorithm proposed by [Mobicom18](https://dl.acm.org/doi/abs/10.1145/3241539.3241552)
+* frame struct: the cellular applies FDD or TDD. It must be set to 1 to apply FDD
+* mobility speed: the mobility speed of UEs. If the simulator uses collected CQI traces instead of simulating the channel quality, then it doesn't matter.
+* random seed: random seed
+* config file: a JSON-based configuration file
 
-Change to the experiment directory:
+Config File:
 
-bash
-Copy code
-cd ${PATH-TO-RADIOSABER}/NSDI23-radiosaber-experiments/exp-customization
-Run the experiment script:
+The config file is in JSON file format. It configures the scheduling algorithm, number of UEs, the weight of every slice, and how UEs in every slice instantiate applications and flows.
 
-bash
-Copy code
-./run_backlogged.sh
-Use the appropriate configuration files:
+## Experiments and Reproducibility
+### Spectrum Efficiency and Fairness(Sec 6.1):
+* Change the working directory: ```cd ${PATH-TO-RADIOSABER}/NSDI23-radiosaber-experiments/exp-customization```, and run this experiment with ```./run_backlogged.sh```
 
-For slices with the same weights:
-bash
-Copy code
-./exp-backlogged-20slicesdiffw/config.json
-For slices with different weights:
-bash
-Copy code
-./exp-backlogged-20slicesdiffw/config
-Generate throughput and radio resource distribution graphs:
+* For slices with the same weights, the config file is: ```./exp-backlogged-20slicesdiffw/config.json```
+For slices with different weights, the config file is: ```./exp-backlogged-20slicesdiffw/config ```
 
-bash
-Copy code
-./plot_throughput.py
-Contact
-For any inquiries, feel free to contact 202151137@iiitvadodara.ac.in.
+* After experiments finish, run ```./plot_throughput.py``` to get the throughput and radio resource distribution graph
