@@ -2,20 +2,15 @@
 **Group Number:** Gr13EC431
 
 ### Group Members:
-- **Manasi Pandey**  
-  202151087@iiitvadodara.ac.in  
+- **Manasi Pandey**  - 202151087@iiitvadodara.ac.in  
 
-- **Meshram Gargee Namdeo**  
-  202151093@iiitvadodara.ac.in  
+- **Meshram Gargee Namdeo**  - 202151093@iiitvadodara.ac.in  
 
-- **Samriddhi Meena**   
-  202151137@iiitvadodara.ac.in  
+- **Samriddhi Meena**  - 202151137@iiitvadodara.ac.in  
 
-- **Waghmare Shravani Sunil**  
-  202151180@iiitvadodara.ac.in  
+- **Waghmare Shravani Sunil** - 202151180@iiitvadodara.ac.in  
 
-- **Komal Yadav**  
-  202152317@iiitvadodara.ac.in  
+- **Komal Yadav** - 202152317@iiitvadodara.ac.in  
 
 ---
 
