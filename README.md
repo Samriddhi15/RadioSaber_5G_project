@@ -1,67 +1,69 @@
-# RadioSaber
-## 🏆 Group Details
-**Group Number:** Gr48EC431
+# RadioSaber  
+## 🏆 Group Details  
+**Group Number:** Gr48EC431  
 
-### Group Members:
+### Group Members:  
 - **Manasi Pandey**  - 202151087@iiitvadodara.ac.in  
-
 - **Meshram Gargee Namdeo**  - 202151093@iiitvadodara.ac.in  
-
 - **Samriddhi Meena**  - 202151137@iiitvadodara.ac.in  
-
 - **Waghmare Shravani Sunil** - 202151180@iiitvadodara.ac.in  
-
 - **Komal Yadav** - 202152317@iiitvadodara.ac.in  
 
----
-
-### Mentor
-**Dr. Bhupendra Kumar**
-
----
-# Project Overview
-
-RadioSaber is a state-of-the-art 5G RAN slicing algorithm designed to achieve high spectrum efficiency, ensure weighted fairness among slices subject to their Service Level Agreements (SLA), and allow slices to customize their scheduling policies. For more details, refer to our paper published in **NSDI'2023**.  
+### Mentor  
+**Dr. Bhupendra Kumar**  
 
 ---
 
-## Table of Contents  
-- [Overview of RadioSaber](#overview-of-radiosaber)  
-- [Software Installation](#software-installation)  
-- [How to Run RadioSaber](#how-to-run-radiosaber)  
-- [Configuration File](#configuration-file)  
-- [Experiments and Reproducibility](#experiments-and-reproducibility)  
-  - [Spectrum Efficiency and Fairness (Section 6.1)](#spectrum-efficiency-and-fairness-section-61)  
-- [Contact](#contact)  
+## 📜 Project Overview  
+
+RadioSaber is a cutting-edge **5G RAN slicing algorithm** designed to achieve:  
+1. **High spectrum efficiency**.  
+2. **Weighted fairness** among slices according to their Service Level Agreements (SLAs).  
+3. Support for **customizable scheduling policies** for slices.  
+
+For in-depth details, refer to our paper published in **NSDI'2023**.  
 
 ---
 
-## Overview of RadioSaber  
+## 📂 Table of Contents  
+- [📜 Project Overview](#-project-overview)  
+- [⚙️ Software Installation](#%EF%B8%8F-software-installation)  
+- [🚀 How to Run RadioSaber](#-how-to-run-radiosaber)  
+- [📋 Configuration File](#-configuration-file)  
+- [📊 Experiments and Reproducibility](#-experiments-and-reproducibility)  
+  - [📈 Spectrum Efficiency and Fairness (Section 6.1)](#-spectrum-efficiency-and-fairness-section-61)  
+- [📧 Contact](#-contact)  
 
-RadioSaber is built upon **LTE-Sim**, an open-source framework for simulating Radio Access Networks (RAN) in LTE. LTE-Sim simulates the entire software stack in RAN, including:  
+---
+
+## 🔍 Overview of RadioSaber  
+
+RadioSaber is based on **LTE-Sim**, an open-source framework for simulating Radio Access Networks (RAN) in LTE. LTE-Sim supports:  
 
 - PDCP, RLC, MAC, and RRC layers.  
-- Channel propagation models in the physical layer.  
-- Diverse applications with varying QoS requirements.  
+- Physical layer channel propagation models.  
+- Applications with diverse **QoS requirements**.  
 - User mobility scenarios.  
 
-### Key Features:  
+### ✨ Key Features:  
 - **100 MHz downlink bandwidth** for cells.  
-- Allocation of **Resource Block Groups (RBGs)** instead of individual Resource Blocks (RBs).  
+- Resource allocation at the **Resource Block Group (RBG)** level.  
 - Support for **subband CQI report mechanisms**.  
-- Use of **real channel quality traces** collected with Software Defined Radios (SDR).  
+- Use of **real channel quality traces** from Software Defined Radios (SDR).  
 
-RadioSaber focuses primarily on flow scheduling in the MAC layer.  
+The primary focus of RadioSaber is on **flow scheduling** in the MAC layer.  
 
 ---
 
-## Software Installation  
+## ⚙️ Software Installation  
 
-RadioSaber is currently tested and supported in an **Ubuntu environment**.  
+RadioSaber is tested in an **Ubuntu environment**.  
 
 ### Prerequisites:  
 Install the required library:  
-```bash
+```bash  
+sudo apt-get install libjsoncpp-dev  
+
 sudo apt-get install libjsoncpp-dev
 ## How to Run RadioSaber  
 
