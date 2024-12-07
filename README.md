@@ -1,5 +1,5 @@
-## 🏆 Project Status
-**Group Number:** Gr13EC431
+## 🏆 Group Details
+**Group Number:** Gr48EC431
 
 ### Group Members:
 - **Manasi Pandey**  - 202151087@iiitvadodara.ac.in  
