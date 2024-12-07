@@ -1,3 +1,4 @@
+# RadioSaber
 ## 🏆 Group Details
 **Group Number:** Gr48EC431
 
@@ -18,7 +19,7 @@
 **Dr. Bhupendra Kumar**
 
 ---
-# RadioSaber  
+# Project Overview
 
 RadioSaber is a state-of-the-art 5G RAN slicing algorithm designed to achieve high spectrum efficiency, ensure weighted fairness among slices subject to their Service Level Agreements (SLA), and allow slices to customize their scheduling policies. For more details, refer to our paper published in **NSDI'2023**.  
 
