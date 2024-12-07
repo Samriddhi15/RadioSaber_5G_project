@@ -3,28 +3,18 @@
 
 ### Group Members:
 - **Manasi Pandey**  
-  Computer Science and Engineering  
-  IIIT Vadodara  
   202151087@iiitvadodara.ac.in  
 
 - **Meshram Gargee Namdeo**  
-  Computer Science and Engineering  
-  IIIT Vadodara  
   202151093@iiitvadodara.ac.in  
 
-- **Samriddhi Meena**  
-  Computer Science and Engineering  
-  IIIT Vadodara  
+- **Samriddhi Meena**   
   202151137@iiitvadodara.ac.in  
 
 - **Waghmare Shravani Sunil**  
-  Computer Science and Engineering  
-  IIIT Vadodara  
   202151180@iiitvadodara.ac.in  
 
 - **Komal Yadav**  
-  Information Technology  
-  IIIT Vadodara  
   202152317@iiitvadodara.ac.in  
 
 ---
